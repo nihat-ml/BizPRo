@@ -1,0 +1,23 @@
+*{
+    color: white;
+}
+.container{
+    ul{
+        a:hover{
+            color: red;
+        }
+    }
+    .menu-bar{
+        i:hover{
+            color: red;
+        }
+    }
+}
+.intro{
+    a{
+        button{
+            background-color: transparent;
+            border: 1px solid red;
+        }
+    }
+}

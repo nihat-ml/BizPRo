@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+* {
+  color: white;
+}
+
+.container ul a:hover {
+  color: red;
+}
+.container .menu-bar i:hover {
+  color: red;
+}
+
+.intro a button {
+  background-color: transparent;
+  border: 1px solid red;
+}
+
+.header {
+  width: 100%;
+  background-image: url(https://preview.colorlib.com/theme/bizpro/images/home/slide-1.jpg.webp);
+  height: 90vh;
+  background-position: 50% 50%;
+}
+@media (max-width: 992px) {
+  .header {
+    height: 70vh;
+  }
+}
+.header .container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.header .container .logo {
+  padding: 20px;
+}
+.header .container ul {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  padding: 40px 10px;
+}
+@media (max-width: 1200px) {
+  .header .container ul {
+    display: none;
+  }
+}
+.header .container .menu-bar {
+  display: none;
+  font-size: 20px;
+  padding: 40px 10px;
+}
+@media (max-width: 1200px) {
+  .header .container .menu-bar {
+    display: flex;
+  }
+}
+.header .intro {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+.header .over-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 30px;
+  padding: 10px;
+}
+.header .over-text p {
+  font-size: 20px;
+}
+.header .over-text .button {
+  font-size: 17px;
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid red;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+.header .over-text .button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #990000;
+  transition: all 0.3s;
+  z-index: -2;
+}
+.header .over-text .button:hover::after {
+  color: white;
+  width: 100%;
+}

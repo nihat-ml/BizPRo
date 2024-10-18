@@ -1,0 +1,94 @@
+.header{
+        width: 100%;
+        background-image: url(https://preview.colorlib.com/theme/bizpro/images/home/slide-1.jpg.webp);
+        height: 90vh;
+        background-position: 50% 50%;
+        
+        @include responsive(desktop){
+            height: 70vh;
+        }
+        .container{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            .logo{
+                padding: 20px;
+            }
+            ul{
+                display: flex;
+                gap: 20px;
+                font-size: 20px;
+                padding: 40px 10px;
+                @include responsive(large){
+                    display: none;
+                }
+            }
+            .menu-bar{
+                display: none;
+                font-size: 20px;
+                padding: 40px 10px;
+                @include responsive(large){
+                    display: flex;
+                }
+            }
+      
+        }
+        .intro{
+            width: 70%;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            padding: 10%;
+            }
+            .over-text{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                font-size: 30px;
+                padding: 10px;
+           
+                p{
+                    font-size: 20px;
+                   
+                }
+                .button{
+                    font-size: 17px;
+                    display: inline-block;
+                    padding: 12px 20px;
+                    
+                    border: 1px solid red;
+                    text-transform: uppercase;
+                    position: relative;
+                    // overflow: hidden;
+                    z-index: 1;
+                
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 0%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: darken(red, $amount: 20%);
+                        
+                        transition: all .3s;
+                       
+                        z-index: -2;
+                    }
+                    &:hover::after{
+                        color: white;
+                        width: 100%;
+                        
+                    }
+
+                }
+
+                
+        }    
+           
+}
